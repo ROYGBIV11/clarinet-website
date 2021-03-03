@@ -6,3 +6,17 @@
         <li><a href="bassClarinet.html"><span id=link3">Bass Clarinet</span></a></li>
     </ul>
 </nav>
+<script>
+    selectActive();
+            
+    function selectActive() {
+    for (i=1; i<=3; i++) {
+        if (document.getElementById("page" + i) != null) {
+            var linkName = document.getElementById("link" + i).innerHTML;
+            alert(linkName);
+            document.getElementById("link" + i).innerHTML = "<span class=active>" + linkName + "</span>";   
+        }
+        alert("hi" + i);
+    }
+}
+</script>
