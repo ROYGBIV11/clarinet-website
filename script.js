@@ -1,10 +1,9 @@
-loadHeader();
+selectActive();
 
 function loadHeader () {
     $(document).ready(function(){
-        $("#nav").load("https://raw.githubusercontent.com/ROYGBIV11/clarinet-website/main/header.html?token=AS74IANMD3B6VSPGNDALQHTAIAIDM");  
+        $("#nav").load("header.html");  
     });
-    selectActive();
 }
 
 function selectActive() {
@@ -12,8 +11,9 @@ function selectActive() {
         if (document.getElementById("page" + i) != null) {
             var linkName = document.getElementById("link" + i).innerHTML;
             alert(linkName);
-//            document.getElementById("link" + i).innerHTML = "<span class=active>" + linkName + "</span>";   
+            document.getElementById("link" + i).innerHTML = "<span class=active>" + linkName + "</span>";   
         }
         alert("hi" + i);
     }
+    loadHeader();
 }
