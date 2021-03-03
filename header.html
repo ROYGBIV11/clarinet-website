@@ -1,9 +1,9 @@
 <!doctype html>
 <nav>
     <ul>
-        <a href="index.html"><li id="link1">Home</li></a>
-        <a href="clarinet.html"><li id="link2">Clarinet</li></a>
-        <a href="bassClarinet.html"><li id="link3">Bass Clarinet</li></a>
+        <a href="index.html"id="link1"><li>Home</li></a>
+        <a href="clarinet.html" id="link2"><li>Clarinet</li></a>
+        <a href="bassClarinet.html" id="link3"><li>Bass Clarinet</li></a>
     </ul>
 </nav>
 <script>
@@ -13,10 +13,8 @@
     for (i=1; i<=3; i++) {
         if (document.getElementById("page" + i) != null) {
             var linkName = document.getElementById("link" + i).innerHTML;
-            alert(linkName);
-            document.getElementById("link" + i).innerHTML = "<span class=active>" + linkName + "</span>";   
+            document.getElementById("link" + i).innerHTML = "<li class=active>" + linkName + "</li>";   
         }
-        alert("hi" + i);
     }
 }
 </script>
